@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     // Declare an adapter
-    RecyclerView.Adapter programAdapter;
+    RecyclerView.Adapter ProgramAdapter;
     RecyclerView.LayoutManager layoutmanager;
 
 
@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         layoutmanager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutmanager);
-        programAdapter = new ProgramAdapter(this, arr, subject, qulification, image);
+
+        ProgramAdapter programAdapter = new ProgramAdapter(this, arr, subject, qulification, image);
         recyclerView.setAdapter(programAdapter);
     }
 
